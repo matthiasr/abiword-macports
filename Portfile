@@ -1,4 +1,4 @@
-# $Id: Portfile 36964 2008-05-21 12:08:44Z jmr@macports.org $
+# $Id$
 PortSystem 1.0
 name		abiword
 version		2.4.5
