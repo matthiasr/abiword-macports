@@ -16,41 +16,9 @@ checksums	md5 b44ffbebd5bd0f5f98f34dc8c688b4ed \
 distname	abiword-${version}
 use_bzip2	yes
 worksrcdir	${distname}/abi
-default_variants	+use_binary
+default_variants	+use_source
 
 build.target {}
-
-pre-fetch {
-	if {! [variant_isset use_binary] && ! [variant_isset use_source]} {
-		return -code 1 "Please select either use_binary or use_source variant"
-	}
-}
-
-variant use_binary conflicts use_source {
-	distname AbiWord-${version}-10.2
-	extract.suffix .dmg.gz
-	master_sites    http://www.abisource.org/downloads/abiword/${version}/MacOSX \
-			http://www.nl.abisource.org/downloads/abiword/${version}/MacOSX \
-			http://os.cqu.edu.au/macosx/office/abiword
-	checksums	md5 13d249d7f0181a5c44e7342b302b19ae
-	use_bzip2	no
-	extract.post_args > ${workpath}/${distname}.dmg
-	post-extract {
-		file mkdir /tmp/${name}-${version}
-		system "hdiutil attach ${workpath}/${distname}.dmg -private -nobrowse -mountpoint /tmp/${name}-${version}"
-	}
-	patch {}
-	use_configure	no
-	build {}
-	destroot {
-		file mkdir ${destroot}/Applications/MacPorts
-		file copy /tmp/${name}-${version}/AbiWord.app ${destroot}/Applications/MacPorts
-	}
-	post-destroot {
-		system "hdiutil detach /tmp/${name}-${version}"
-		file delete -force /tmp/${name}-${version}
-	}
-}
 
 variant use_source {
 	depends_lib	\
