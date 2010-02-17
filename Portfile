@@ -16,11 +16,11 @@ checksums	md5 b44ffbebd5bd0f5f98f34dc8c688b4ed \
 distname	abiword-${version}
 use_bzip2	yes
 worksrcdir	${distname}/abi
-default_variants	+use_source
+default_variants	+cocoa
 
 build.target {}
 
-variant use_source {
+variant cocoa {
 	depends_lib	\
 		port:zlib \
 		port:libpng \
