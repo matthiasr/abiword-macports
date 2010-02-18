@@ -32,6 +32,6 @@ variant cocoa {
 
 	configure.args	\
 		--mandir=${prefix}/share/man \
-                --with-macports \
+                --with-darwinports \
                 --prefix=${prefix}
 }
