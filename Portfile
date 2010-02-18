@@ -23,7 +23,10 @@ variant cocoa {
 		port:libpng \
 		port:fribidi \
 		port:fontconfig \
-		port:ImageMagick
+		port:ImageMagick \
+                port:wv \
+                port:libgsf \
+                port:cairo
 
 	patchfiles	\
 		configure.patch \
