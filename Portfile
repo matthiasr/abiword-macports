@@ -8,7 +8,7 @@ maintainers	nomaintainer
 categories	editors textproc aqua
 platforms	darwin 
 homepage	http://www.abisource.com/
-master_sites    http://www.abisource.org/downloads/abiword/${version}/source \
+master_sites    http://www.abisource.org/downloads/abiword/${version}/source
 checksums	md5 b44ffbebd5bd0f5f98f34dc8c688b4ed \
 		sha1 ffdf872b3c0bd54f6ba8443cbc77997f2855dc6b \
 		rmd160 3b38b62241955ed0ccac26a06045290107989f99
