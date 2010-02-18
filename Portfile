@@ -31,11 +31,7 @@ variant cocoa {
 	configure.cflags-append -no-cpp-precomp
 
 	configure.args	\
-		--enable-Cocoa \
 		--mandir=${prefix}/share/man \
-		--with-zlib=${prefix} \
-		--with-libpng=${prefix} \
-		--with-popt=${prefix} \
-		--without-epath \
-		--disable-gnome
+                --with-macports \
+                --prefix=${prefix}
 }
