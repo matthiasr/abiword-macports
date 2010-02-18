@@ -28,10 +28,6 @@ variant cocoa {
                 port:libgsf \
                 port:cairo
 
-	patchfiles	\
-		configure.patch \
-		abi-detect-platform.m4.patch
-
 	configure.cflags-append -no-cpp-precomp
 
 	configure.args	\
