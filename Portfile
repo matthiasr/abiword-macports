@@ -28,6 +28,8 @@ variant cocoa {
                 port:libgsf \
                 port:cairo
 
+        patchfiles  configure.patch
+
 	configure.cflags-append -no-cpp-precomp
 
 	configure.args	\

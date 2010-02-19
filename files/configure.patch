@@ -1,0 +1,11 @@
+--- configure~	2010-02-18 18:44:01.000000000 +0100
++++ configure	2010-02-19 21:13:32.000000000 +0100
+@@ -18802,7 +18802,7 @@
+ ABIWORD_HEADERSDIR="${includedir}/${PACKAGE_NAME}-${ABIWORD_SERIES}"
+ 
+ if test "$TOOLKIT" == "cocoa"; then
+-ABIWORD_CONTENTSDIR="/AbiWord.app/Contents"
++ABIWORD_CONTENTSDIR="/Applications/MacPorts/AbiWord.app/Contents"
+ 
+ ABIWORD_DATADIR="${ABIWORD_CONTENTSDIR}/Resources"
+ 
