@@ -30,6 +30,14 @@ variant cocoa {
 
         patchfiles  configure.patch
 
+        pre-configure {
+           set cairo_quartz_pc ${prefix}/lib/pkgconfig/cairo-quartz.pc
+           if {![file exists ${cairo_quartz_pc}]} {
+               ui_error "cairo must be installed with the quartz variant."
+               return -code error "incompatible cairo installation"
+           }
+        }
+
 	configure.cflags-append -no-cpp-precomp
 
 	configure.args	\
