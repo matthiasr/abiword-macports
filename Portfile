@@ -7,7 +7,7 @@ long_description        A word processor with gnome support.
 maintainers	nomaintainer
 categories	editors textproc aqua
 platforms	darwin 
-homepage	http://www.abisource.com/
+homepage        http://www.abisource.com/
 master_sites    http://2pktfkt.de/
 checksums       md5 cacc879b12c4ccc50dd62c51d8410bd4 \
                 sha1 f0be4c5b3b49120f8f6f1b43f2523639215c1e4e \
