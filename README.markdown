@@ -9,17 +9,15 @@ need it I abandoned the attempt at that point.
 If you still want to try it out, here's what to do:
 
 - If you haven't already, get & install [MacPorts](http://www.macports.org/)
-- create an additional, local ports folder, e.g. 
-        mkdir -p ~/ports
+- create the directory for the local portfile, clone the repository and build the portindex:
+        mkdir -p ~/ports/editors
+        git clone git://github.com/matthiasr/abiword-macports.git ~/ports/editors/abiword
+        portindex ~/ports
 - register it with MacPorts: add a new line 
         file:///Users/<your username>/ports
     to /opt/local/etc/macports/sources.conf right before
         rsync://rsync.macports.org/release/ports/ [default]
     (adjust the path suitingly)
-- create the directory for the local portfile, clone the repository and build the portindex:
-        mkdir -p ~/ports/editors
-        git clone git://github.com/matthiasr/abiword-macports.git ~/ports/editors/abiword
-        portindex ~/ports
 - install cairo with the quartz variant
         sudo port install cairo +quartz
 - install abiword
