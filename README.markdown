@@ -8,7 +8,7 @@ need it I abandoned the attempt at that point.
 
 If you still want to try it out, here's what to do:
 
-- If you haven't already, get & install [MacPorts](http://www.macports.org/)
+- if you haven't already, get & install [MacPorts](http://www.macports.org/)
 - create the directory for the local portfile, clone the repository and build the portindex:
         mkdir -p ~/ports/editors
         git clone git://github.com/matthiasr/abiword-macports.git ~/ports/editors/abiword
